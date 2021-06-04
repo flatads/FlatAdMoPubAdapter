@@ -1,0 +1,6 @@
+framework module FlatAdMoPubAdapter {
+  umbrella header "FlatAdMoPubAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

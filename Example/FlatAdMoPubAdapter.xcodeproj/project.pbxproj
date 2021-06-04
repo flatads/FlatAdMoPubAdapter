@@ -24,6 +24,11 @@
 		6ACC7499786F1254E3DF80B9 /* Pods_FlatAdMoPubAdapter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7B05E1201D1EA5E63571D3 /* Pods_FlatAdMoPubAdapter_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		A7D018402669C780007DBF6C /* MoPubInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D018342669C780007DBF6C /* MoPubInterstitialViewController.m */; };
+		A7D018412669C780007DBF6C /* MPCustomNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D018362669C780007DBF6C /* MPCustomNativeAdView.m */; };
+		A7D018422669C780007DBF6C /* MoPubNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D018372669C780007DBF6C /* MoPubNativeViewController.m */; };
+		A7D018432669C780007DBF6C /* MoPubRewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0183B2669C780007DBF6C /* MoPubRewardedViewController.m */; };
+		A7D018442669C780007DBF6C /* MopubBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0183F2669C780007DBF6C /* MopubBannerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +45,7 @@
 		1F0CD223136591F30FB5CD5F /* Pods-FlatAdMoPubAdapter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatAdMoPubAdapter_Example.debug.xcconfig"; path = "Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		304A022E3B39650A70F5B14E /* Pods-FlatAdMoPubAdapter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatAdMoPubAdapter_Tests.release.xcconfig"; path = "Target Support Files/Pods-FlatAdMoPubAdapter_Tests/Pods-FlatAdMoPubAdapter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3EDCC76853FAA1DF058B6E3B /* Pods_FlatAdMoPubAdapter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlatAdMoPubAdapter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		57E049F6B68AA8D7F0A1362A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		57E049F6B68AA8D7F0A1362A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* FlatAdMoPubAdapter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatAdMoPubAdapter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,9 +69,19 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7842B66B6D4AFE852492FD2C /* Pods-FlatAdMoPubAdapter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatAdMoPubAdapter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FlatAdMoPubAdapter_Tests/Pods-FlatAdMoPubAdapter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B98D9C9B883A1196C73AEC32 /* FlatAdMoPubAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FlatAdMoPubAdapter.podspec; path = ../FlatAdMoPubAdapter.podspec; sourceTree = "<group>"; };
+		A7D018332669C780007DBF6C /* MoPubInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoPubInterstitialViewController.h; sourceTree = "<group>"; };
+		A7D018342669C780007DBF6C /* MoPubInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoPubInterstitialViewController.m; sourceTree = "<group>"; };
+		A7D018362669C780007DBF6C /* MPCustomNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCustomNativeAdView.m; sourceTree = "<group>"; };
+		A7D018372669C780007DBF6C /* MoPubNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoPubNativeViewController.m; sourceTree = "<group>"; };
+		A7D018382669C780007DBF6C /* MPCustomNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCustomNativeAdView.h; sourceTree = "<group>"; };
+		A7D018392669C780007DBF6C /* MoPubNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoPubNativeViewController.h; sourceTree = "<group>"; };
+		A7D0183B2669C780007DBF6C /* MoPubRewardedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoPubRewardedViewController.m; sourceTree = "<group>"; };
+		A7D0183C2669C780007DBF6C /* MoPubRewardedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoPubRewardedViewController.h; sourceTree = "<group>"; };
+		A7D0183E2669C780007DBF6C /* MopubBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MopubBannerViewController.h; sourceTree = "<group>"; };
+		A7D0183F2669C780007DBF6C /* MopubBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MopubBannerViewController.m; sourceTree = "<group>"; };
+		B98D9C9B883A1196C73AEC32 /* FlatAdMoPubAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FlatAdMoPubAdapter.podspec; path = ../FlatAdMoPubAdapter.podspec; sourceTree = "<group>"; };
 		BA7B05E1201D1EA5E63571D3 /* Pods_FlatAdMoPubAdapter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlatAdMoPubAdapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB637DFE685D87D1E9704E76 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BB637DFE685D87D1E9704E76 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +147,7 @@
 		6003F593195388D20070C39A /* Example for FlatAdMoPubAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				A7D018312669C780007DBF6C /* Controllers */,
 				6003F59C195388D20070C39A /* FMAppDelegate.h */,
 				6003F59D195388D20070C39A /* FMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -185,6 +201,55 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		A7D018312669C780007DBF6C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7D018322669C780007DBF6C /* Interstitial */,
+				A7D018352669C780007DBF6C /* Native */,
+				A7D0183A2669C780007DBF6C /* Rewarded */,
+				A7D0183D2669C780007DBF6C /* Banner */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A7D018322669C780007DBF6C /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				A7D018332669C780007DBF6C /* MoPubInterstitialViewController.h */,
+				A7D018342669C780007DBF6C /* MoPubInterstitialViewController.m */,
+			);
+			path = Interstitial;
+			sourceTree = "<group>";
+		};
+		A7D018352669C780007DBF6C /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				A7D018362669C780007DBF6C /* MPCustomNativeAdView.m */,
+				A7D018372669C780007DBF6C /* MoPubNativeViewController.m */,
+				A7D018382669C780007DBF6C /* MPCustomNativeAdView.h */,
+				A7D018392669C780007DBF6C /* MoPubNativeViewController.h */,
+			);
+			path = Native;
+			sourceTree = "<group>";
+		};
+		A7D0183A2669C780007DBF6C /* Rewarded */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0183B2669C780007DBF6C /* MoPubRewardedViewController.m */,
+				A7D0183C2669C780007DBF6C /* MoPubRewardedViewController.h */,
+			);
+			path = Rewarded;
+			sourceTree = "<group>";
+		};
+		A7D0183D2669C780007DBF6C /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0183E2669C780007DBF6C /* MopubBannerViewController.h */,
+				A7D0183F2669C780007DBF6C /* MopubBannerViewController.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
 		CD1CEC9D0A9EA9EB8DBB18B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +258,6 @@
 				7842B66B6D4AFE852492FD2C /* Pods-FlatAdMoPubAdapter_Tests.debug.xcconfig */,
 				304A022E3B39650A70F5B14E /* Pods-FlatAdMoPubAdapter_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +272,8 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				04028DEF73FFC85FB60219F1 /* [CP] Embed Pods Frameworks */,
+				CE0C15C46529A4A0E86A540B /* [CP] Embed Pods Frameworks */,
+				36DBF3F42BE7B5247E6DF8C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +323,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -295,22 +361,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04028DEF73FFC85FB60219F1 /* [CP] Embed Pods Frameworks */ = {
+		36DBF3F42BE7B5247E6DF8C5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FlatAdMoPubAdapter/FlatAdMoPubAdapter.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FlatAds_sdk/FlatAds_sdk.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlatAdMoPubAdapter.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlatAds_sdk.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		914170DF7A804138E229BE37 /* [CP] Check Pods Manifest.lock */ = {
@@ -333,6 +399,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE0C15C46529A4A0E86A540B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/mopub-ios-sdk/MoPubSDK.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OMSDK_Mopub/OMSDK_Mopub.framework/OMSDK_Mopub",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoPubSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OMSDK_Mopub.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA0FCBFA47E685EBCD9BA4A4 /* [CP] Check Pods Manifest.lock */ = {
@@ -364,8 +466,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D018412669C780007DBF6C /* MPCustomNativeAdView.m in Sources */,
 				6003F59E195388D20070C39A /* FMAppDelegate.m in Sources */,
+				A7D018432669C780007DBF6C /* MoPubRewardedViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* FMViewController.m in Sources */,
+				A7D018422669C780007DBF6C /* MoPubNativeViewController.m in Sources */,
+				A7D018402669C780007DBF6C /* MoPubInterstitialViewController.m in Sources */,
+				A7D018442669C780007DBF6C /* MopubBannerViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

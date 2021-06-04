@@ -8,11 +8,59 @@
 
 #import "FMAppDelegate.h"
 
+#import <FlatAds_sdk/FlatAdsSDK.h>
+
+#if __has_include(<MoPub/MoPub.h>)
+#import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDK/MoPub.h>)
+#import <MoPubSDK/MoPub.h>
+#else
+#import "MoPub.h"
+#import "MPRewardedAds.h"
+#endif
+
+#import <FlatAdMoPubAdapter/FAFlatAdapterConfiguration.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+
 @implementation FMAppDelegate
+
+- (void)_initMoPub
+{
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"343cf980-a17c-11eb-ad10-bf9f4da0961d"];
+    
+    sdkConfig.globalMediationSettings = @[];
+    sdkConfig.loggingLevel = MPBLogLevelInfo;
+    sdkConfig.allowLegitimateInterest = YES;
+    sdkConfig.additionalNetworks = @[FAFlatAdapterConfiguration.class];
+    
+    NSMutableDictionary *configurations = [NSMutableDictionary new];
+    
+    NSMutableDictionary *flatConfig = [NSMutableDictionary new];
+    [flatConfig setObject:@"EWAHVE8S" forKey:@"appid"];
+    [flatConfig setObject:@"uihjbnklnm78gyhu" forKey:@"token"];
+    
+    configurations[@"FAFlatAdapterConfiguration"] = flatConfig;
+    
+    sdkConfig.mediatedNetworkConfigurations = configurations;
+    
+    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig
+                                                completion:^{
+        NSLog ( @"SDK initialization complete" );
+        // SDK initialization complete. Ready to make ad requests.
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MPRewardedAds loadRewardedAdWithAdUnitID:@"5083ff89717047aabced45d8f19e64de"
+                                withMediationSettings:nil];
+        });
+        
+    }];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch
+    NSString * version = [FlatAdsSDK sdkVersion];
+    [self _initMoPub];
     return YES;
 }
 

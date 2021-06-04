@@ -1,0 +1,6 @@
+framework module FlatAds_sdk {
+  umbrella header "FlatAds_sdk.h"
+
+  export *
+  module * { export * }
+}

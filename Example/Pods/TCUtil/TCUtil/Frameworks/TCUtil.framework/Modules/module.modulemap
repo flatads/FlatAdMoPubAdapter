@@ -1,0 +1,6 @@
+framework module TCUtil {
+  umbrella header "TCUtil.h"
+
+  export *
+  module * { export * }
+}

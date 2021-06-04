@@ -1,0 +1,6 @@
+framework module Pods_FlatAdMoPubAdapter_Example {
+  umbrella header "Pods-FlatAdMoPubAdapter_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
