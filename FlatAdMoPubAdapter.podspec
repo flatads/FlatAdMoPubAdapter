@@ -53,27 +53,27 @@ An FlatAds_sdk adapter 4 mopub.
   }
   
   s.subspec 'Banner' do |sb|
-    sb.source_files = "iOSMoPubAdapter/Banner/*.{h,m}"
+    sb.source_files = "FlatAdMoPubAdapter/Banner/*.{h,m}"
   end
   
   s.subspec 'Configuration' do |sb|
-    sb.source_files = "iOSMoPubAdapter/Configuration/*.{h,m}"
+    sb.source_files = "FlatAdMoPubAdapter/Configuration/*.{h,m}"
   end
   
   s.subspec 'Interstitial' do |sb|
-    sb.source_files = "iOSMoPubAdapter/Interstitial/*.{h,m}"
+    sb.source_files = "FlatAdMoPubAdapter/Interstitial/*.{h,m}"
   end
   
   s.subspec 'Native' do |sb|
-    sb.source_files = "iOSMoPubAdapter/Native/*.{h,m}"
+    sb.source_files = "FlatAdMoPubAdapter/Native/*.{h,m}"
   end
   
   s.subspec 'Rewarded' do |sb|
-    sb.source_files = "iOSMoPubAdapter/Rewarded/*.{h,m}"
+    sb.source_files = "FlatAdMoPubAdapter/Rewarded/*.{h,m}"
   end
 
   s.subspec 'Util' do |sb|
-    sb.source_files = "iOSMoPubAdapter/Util/*.{h,m}"
+    sb.source_files = "FlatAdMoPubAdapter/Util/*.{h,m}"
   end
   
   s.dependency "FlatAds_sdk", "~> 1.0.5"
