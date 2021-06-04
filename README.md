@@ -24,6 +24,38 @@ pod 'FlatAdMoPubAdapter'
 
 请联系您的客户经理为您创建Flat Ads 开发者账号。文档见 [Flat Ads SDK 入门指南](https://github.com/flatads/document "Flat Ads SDK入门指南")。
 
+您需要在 MoPub 后台中的 Orders 中配置 Custom event clas（即Adapter 类名）
+
+Banner
+
+```objc
+MPFlatAdBannerCustomEvent
+```
+
+Interstitial
+
+```objc
+MPFlatAdInterstitialCustomEvent
+```
+
+Native
+
+```objc
+MPFlatAdNativeCustomEvent
+```
+
+Rewarded
+
+```objc
+MPFlatAdMobRewardedVideoCustomEvent
+```
+
+Custom event data， 广告位 id 统一 为 unitid：如：
+
+```json
+{"unitid":"your unitid"}
+```
+
 ```objc
 #if __has_include(<MoPub/MoPub.h>)
 #import <MoPub/MoPub.h>
