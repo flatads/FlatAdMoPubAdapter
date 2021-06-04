@@ -33,13 +33,15 @@ An FlatAds_sdk adapter 4 mopub.
   s.requires_arc = true
   s.static_framework = true
 
-  s.source_files = 'FlatAdMoPubAdapter/Classes/**/*'
+  s.public_header_files = 'FlatAdMoPubAdapter/Classes/**/*.h'
+  
+  s.source_files = 'FlatAdMoPubAdapter/Classes/**/*.{h,m}'
   
   # s.resource_bundles = {
   #   'FlatAdMoPubAdapter' => ['FlatAdMoPubAdapter/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  
   # s.frameworks = 'UIKit', 'MapKit'
 
   s.pod_target_xcconfig = {
@@ -53,27 +55,32 @@ An FlatAds_sdk adapter 4 mopub.
   }
   
   s.subspec 'Banner' do |sb|
-    sb.source_files = "FlatAdMoPubAdapter/Banner/*.{h,m}"
+    sb.source_files = 'FlatAdMoPubAdapter/Classes/Banner'
+    sb.dependency 'FlatAdMoPubAdapter/Configuration'
   end
   
   s.subspec 'Configuration' do |sb|
-    sb.source_files = "FlatAdMoPubAdapter/Configuration/*.{h,m}"
+    sb.source_files = 'FlatAdMoPubAdapter/Classes/Configuration'
   end
   
   s.subspec 'Interstitial' do |sb|
-    sb.source_files = "FlatAdMoPubAdapter/Interstitial/*.{h,m}"
+    sb.source_files = 'FlatAdMoPubAdapter/Classes/Interstitial'
+    sb.dependency 'FlatAdMoPubAdapter/Configuration'
   end
   
   s.subspec 'Native' do |sb|
-    sb.source_files = "FlatAdMoPubAdapter/Native/*.{h,m}"
+    sb.source_files = 'FlatAdMoPubAdapter/Classes/Native'
+    sb.dependency 'FlatAdMoPubAdapter/Configuration'
+    sb.dependency 'FlatAdMoPubAdapter/Util'
   end
   
   s.subspec 'Rewarded' do |sb|
-    sb.source_files = "FlatAdMoPubAdapter/Rewarded/*.{h,m}"
+    sb.source_files = 'FlatAdMoPubAdapter/Classes/Rewarded'
+    sb.dependency 'FlatAdMoPubAdapter/Configuration'
   end
 
   s.subspec 'Util' do |sb|
-    sb.source_files = "FlatAdMoPubAdapter/Util/*.{h,m}"
+    sb.source_files = 'FlatAdMoPubAdapter/Classes/Util'
   end
   
   s.dependency "FlatAds_sdk", "~> 1.0.5"

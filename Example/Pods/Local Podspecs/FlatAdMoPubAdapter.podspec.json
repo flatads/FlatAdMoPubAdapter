@@ -20,7 +20,8 @@
   },
   "requires_arc": true,
   "static_framework": true,
-  "source_files": "FlatAdMoPubAdapter/Classes/**/*",
+  "public_header_files": "FlatAdMoPubAdapter/Classes/**/*.h",
+  "source_files": "FlatAdMoPubAdapter/Classes/**/*.{h,m}",
   "pod_target_xcconfig": {
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
@@ -40,27 +41,50 @@
   "subspecs": [
     {
       "name": "Banner",
-      "source_files": "iOSMoPubAdapter/Banner/*.{h,m}"
+      "source_files": "FlatAdMoPubAdapter/Classes/Banner",
+      "dependencies": {
+        "FlatAdMoPubAdapter/Configuration": [
+
+        ]
+      }
     },
     {
       "name": "Configuration",
-      "source_files": "iOSMoPubAdapter/Configuration/*.{h,m}"
+      "source_files": "FlatAdMoPubAdapter/Classes/Configuration"
     },
     {
       "name": "Interstitial",
-      "source_files": "iOSMoPubAdapter/Interstitial/*.{h,m}"
+      "source_files": "FlatAdMoPubAdapter/Classes/Interstitial",
+      "dependencies": {
+        "FlatAdMoPubAdapter/Configuration": [
+
+        ]
+      }
     },
     {
       "name": "Native",
-      "source_files": "iOSMoPubAdapter/Native/*.{h,m}"
+      "source_files": "FlatAdMoPubAdapter/Classes/Native",
+      "dependencies": {
+        "FlatAdMoPubAdapter/Configuration": [
+
+        ],
+        "FlatAdMoPubAdapter/Util": [
+
+        ]
+      }
     },
     {
       "name": "Rewarded",
-      "source_files": "iOSMoPubAdapter/Rewarded/*.{h,m}"
+      "source_files": "FlatAdMoPubAdapter/Classes/Rewarded",
+      "dependencies": {
+        "FlatAdMoPubAdapter/Configuration": [
+
+        ]
+      }
     },
     {
       "name": "Util",
-      "source_files": "iOSMoPubAdapter/Util/*.{h,m}"
+      "source_files": "FlatAdMoPubAdapter/Classes/Util"
     }
   ]
 }
