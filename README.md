@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 pod 'FlatAdMoPubAdapter'
 ```
 
-## Use
+## How To Use
 
 请联系您的客户经理为您创建Flat Ads 开发者账号。文档见[Flat Ads SDK 入门指南](https://github.com/flatads/document "Flat Ads SDK入门指南")。
 
