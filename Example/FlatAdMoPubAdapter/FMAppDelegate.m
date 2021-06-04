@@ -26,7 +26,7 @@
 
 - (void)_initMoPub
 {
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"343cf980-a17c-11eb-ad10-bf9f4da0961d"];
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@""];
     
     sdkConfig.globalMediationSettings = @[];
     sdkConfig.loggingLevel = MPBLogLevelInfo;
@@ -36,8 +36,8 @@
     NSMutableDictionary *configurations = [NSMutableDictionary new];
     
     NSMutableDictionary *flatConfig = [NSMutableDictionary new];
-    [flatConfig setObject:@"EWAHVE8S" forKey:@"appid"];
-    [flatConfig setObject:@"uihjbnklnm78gyhu" forKey:@"token"];
+    [flatConfig setObject:@"flat ad app id" forKey:@"appid"];
+    [flatConfig setObject:@"flat ad token" forKey:@"token"];
     
     configurations[@"FAFlatAdapterConfiguration"] = flatConfig;
     
@@ -49,8 +49,9 @@
         // SDK initialization complete. Ready to make ad requests.
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MPRewardedAds loadRewardedAdWithAdUnitID:@"5083ff89717047aabced45d8f19e64de"
-                                withMediationSettings:nil];
+            // pre load
+//            [MPRewardedAds loadRewardedAdWithAdUnitID:@"Rewarded Ad unitid"
+//                                withMediationSettings:nil];
         });
         
     }];
@@ -59,7 +60,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch
-    NSString * version = [FlatAdsSDK sdkVersion];
     [self _initMoPub];
     return YES;
 }
