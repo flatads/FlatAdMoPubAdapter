@@ -20,6 +20,42 @@ it, simply add the following line to your Podfile:
 pod 'FlatAdMoPubAdapter'
 ```
 
+## Use
+
+请联系您的客户经理为您创建Flat Ads 开发者账号。文档见[Flat Ads SDK 入门指南](https://github.com/flatads/document "Flat Ads SDK入门指南")。
+
+```objc
+MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@""];
+
+sdkConfig.globalMediationSettings = @[];
+sdkConfig.loggingLevel = MPBLogLevelInfo;
+sdkConfig.allowLegitimateInterest = YES;
+sdkConfig.additionalNetworks = @[FAFlatAdapterConfiguration.class];
+
+NSMutableDictionary *configurations = [NSMutableDictionary new];
+
+NSMutableDictionary *flatConfig = [NSMutableDictionary new];
+[flatConfig setObject:@"flat ad app id" forKey:@"appid"];
+[flatConfig setObject:@"flat ad token" forKey:@"token"];
+
+configurations[@"FAFlatAdapterConfiguration"] = flatConfig;
+
+sdkConfig.mediatedNetworkConfigurations = configurations;
+
+[[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig
+                                            completion:^{
+    NSLog ( @"SDK initialization complete" );
+    // SDK initialization complete. Ready to make ad requests.
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // pre load
+//            [MPRewardedAds loadRewardedAdWithAdUnitID:@"Rewarded Ad unitid"
+//                                withMediationSettings:nil];
+    });
+    
+}];
+```
+
 ## Author
 
 flatads, chenwh02@flatincbr.com
