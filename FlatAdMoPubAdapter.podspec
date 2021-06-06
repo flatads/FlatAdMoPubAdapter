@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlatAdMoPubAdapter'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'FlatAds_sdk MoPub Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -33,9 +33,9 @@ An FlatAds_sdk adapter 4 mopub.
   s.requires_arc = true
   s.static_framework = true
 
-  s.public_header_files = 'FlatAdMoPubAdapter/Classes/**/*.h'
+  s.public_header_files = 'FlatAdMoPubAdapter/Classes/FlatAdMoPubAdapter.h'
   
-  s.source_files = 'FlatAdMoPubAdapter/Classes/**/*.{h,m}'
+  s.source_files = 'FlatAdMoPubAdapter/Classes/FlatAdMoPubAdapter.h'
   
   # s.resource_bundles = {
   #   'FlatAdMoPubAdapter' => ['FlatAdMoPubAdapter/Assets/*.png']
@@ -83,7 +83,7 @@ An FlatAds_sdk adapter 4 mopub.
     sb.source_files = 'FlatAdMoPubAdapter/Classes/Util'
   end
   
-  s.dependency "FlatAds_sdk", "~> 1.0.5"
+  s.dependency "FlatAds_sdk", "~> 1.0"
   s.dependency "mopub-ios-sdk", "~> 5.17.0"
   
 end

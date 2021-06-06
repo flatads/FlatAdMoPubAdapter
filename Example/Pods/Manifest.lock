@@ -14,36 +14,36 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - FlatAdMoPubAdapter (0.1.0):
-    - FlatAdMoPubAdapter/Banner (= 0.1.0)
-    - FlatAdMoPubAdapter/Configuration (= 0.1.0)
-    - FlatAdMoPubAdapter/Interstitial (= 0.1.0)
-    - FlatAdMoPubAdapter/Native (= 0.1.0)
-    - FlatAdMoPubAdapter/Rewarded (= 0.1.0)
-    - FlatAdMoPubAdapter/Util (= 0.1.0)
+  - FlatAdMoPubAdapter (0.1.1):
+    - FlatAdMoPubAdapter/Banner (= 0.1.1)
+    - FlatAdMoPubAdapter/Configuration (= 0.1.1)
+    - FlatAdMoPubAdapter/Interstitial (= 0.1.1)
+    - FlatAdMoPubAdapter/Native (= 0.1.1)
+    - FlatAdMoPubAdapter/Rewarded (= 0.1.1)
+    - FlatAdMoPubAdapter/Util (= 0.1.1)
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAdMoPubAdapter/Banner (0.1.0):
+  - FlatAdMoPubAdapter/Banner (0.1.1):
     - FlatAdMoPubAdapter/Configuration
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAdMoPubAdapter/Configuration (0.1.0):
+  - FlatAdMoPubAdapter/Configuration (0.1.1):
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAdMoPubAdapter/Interstitial (0.1.0):
+  - FlatAdMoPubAdapter/Interstitial (0.1.1):
     - FlatAdMoPubAdapter/Configuration
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAdMoPubAdapter/Native (0.1.0):
+  - FlatAdMoPubAdapter/Native (0.1.1):
     - FlatAdMoPubAdapter/Configuration
     - FlatAdMoPubAdapter/Util
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAdMoPubAdapter/Rewarded (0.1.0):
+  - FlatAdMoPubAdapter/Rewarded (0.1.1):
     - FlatAdMoPubAdapter/Configuration
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAdMoPubAdapter/Util (0.1.0):
+  - FlatAdMoPubAdapter/Util (0.1.1):
     - FlatAds_sdk (~> 1.0.5)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAds_sdk (1.0.5):
@@ -108,7 +108,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  FlatAdMoPubAdapter: b1615085a78bf9be2a01b762f94f457f3de9996c
+  FlatAdMoPubAdapter: f7005f52941ac6c099d3f468eb008f716c4afdeb
   FlatAds_sdk: 7323eb8231cb63de6b2a07700dc9a0cf7dc1a255
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   GoogleAds-IMA-iOS-SDK: 2a9b7b14bda4993306f05287f952dce41b5be4ad

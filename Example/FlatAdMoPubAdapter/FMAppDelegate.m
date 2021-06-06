@@ -36,8 +36,8 @@
     NSMutableDictionary *configurations = [NSMutableDictionary new];
     
     NSMutableDictionary *flatConfig = [NSMutableDictionary new];
-    [flatConfig setObject:@"flat ad app id" forKey:@"appid"];
-    [flatConfig setObject:@"flat ad token" forKey:@"token"];
+    [flatConfig setObject:@"EWAHVE8S" forKey:@"appid"];
+    [flatConfig setObject:@"uihjbnklnm78gyhu" forKey:@"token"];
     
     configurations[@"FAFlatAdapterConfiguration"] = flatConfig;
     
