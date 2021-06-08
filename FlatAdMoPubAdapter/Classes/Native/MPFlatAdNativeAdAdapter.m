@@ -89,6 +89,9 @@
 - (void)nativeAdViewDidClick:(nonnull FAAdNativeView *)nativeView
 {
     [self.delegate nativeAdDidClick:self];
+    
+    [self.delegate nativeAdWillLeaveApplicationFromAdapter:self];
+    
     MPLogAdEvent([MPLogEvent adTappedForAdapter:NSStringFromClass(self.class)], nil);
 }
 
