@@ -38,6 +38,9 @@ typedef void(^FALoadInterstitialAdBlock)(FAInterstitialAd * _Nullable interstiti
 
 @interface FAInterstitialAd : NSObject<FAAdViewProtocol>
 
+/// unit model
+@property (nonatomic, readonly, strong) FAAdUnitModel * _Nullable unitModel;
+
 /**
  * Reference to the object that implements FAAdInterstitialDelegate protocol; will receive load events for the given unitId.
  */

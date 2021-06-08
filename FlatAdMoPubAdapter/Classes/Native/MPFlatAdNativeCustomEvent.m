@@ -120,7 +120,7 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
     nativeAdView.callToActionView = callToActionView;
 
     UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectZero];
-//    iconView.image = nativeAd.images.firstObject;
+//    [iconView setImageWithString:nativeAd.images.firstObject.url];
     [nativeAdView addSubview:iconView];
     nativeAdView.iconView = iconView;
     
@@ -149,14 +149,14 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
         }
     }
 
-    if ([moPubNativeAd.properties[kAdMainImageKey] length]) {
-        if (![MPNativeAdUtils addURLString:moPubNativeAd.properties[kAdMainImageKey]
-                                toURLArray:imageURLs]) {
-            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForInvalidImageURL()], self.unitId);
-            [self.delegate nativeCustomEvent:self
-                    didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidImageURL()];
-        }
-    }
+//    if ([moPubNativeAd.properties[kAdMainImageKey] length]) {
+//        if (![MPNativeAdUtils addURLString:moPubNativeAd.properties[kAdMainImageKey]
+//                                toURLArray:imageURLs]) {
+//            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForInvalidImageURL()], self.unitId);
+//            [self.delegate nativeCustomEvent:self
+//                    didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidImageURL()];
+//        }
+//    }
     
     [super precacheImagesWithURLs:imageURLs
                   completionBlock:^(NSArray *errors) {

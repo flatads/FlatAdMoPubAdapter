@@ -10,16 +10,15 @@
 #endif
 #endif
 
+#import "FlatAdMoPubAdapter.h"
 #import "MPFlatAdBannerCustomEvent.h"
 #import "FAFlatAdapterConfiguration.h"
-#import "FlatAdMoPubAdapter.h"
 #import "MPFlatAdInterstitialCustomEvent.h"
 #import "MPFlatAdNativeAdAdapter.h"
 #import "MPFlatAdNativeCustomEvent.h"
 #import "MPFlatAdNativeRenderer.h"
 #import "MPFlatAdMobRewardedVideoCustomEvent.h"
 #import "UIView+MPFlatAdAdditions.h"
-#import "MPFlatAdBannerCustomEvent.h"
 
 FOUNDATION_EXPORT double FlatAdMoPubAdapterVersionNumber;
 FOUNDATION_EXPORT const unsigned char FlatAdMoPubAdapterVersionString[];

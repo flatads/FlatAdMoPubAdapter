@@ -15,12 +15,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FAAdUnitModel : NSObject
+
 /// The id of the ad unit. You can create your unit id from our Portal.
 @property (nonatomic, copy) NSString *unitId;
+
 /// The view controller that will be used to present  page.
 @property (nonatomic, weak) UIViewController *viewController;
+
 /// Request parameter expansion.
 @property (nonatomic, copy) NSDictionary *appendInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

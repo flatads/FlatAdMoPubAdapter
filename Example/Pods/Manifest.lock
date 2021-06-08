@@ -21,44 +21,43 @@ PODS:
     - FlatAdMoPubAdapter/Native (= 0.1.1)
     - FlatAdMoPubAdapter/Rewarded (= 0.1.1)
     - FlatAdMoPubAdapter/Util (= 0.1.1)
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAdMoPubAdapter/Banner (0.1.1):
     - FlatAdMoPubAdapter/Configuration
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAdMoPubAdapter/Configuration (0.1.1):
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAdMoPubAdapter/Interstitial (0.1.1):
     - FlatAdMoPubAdapter/Configuration
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAdMoPubAdapter/Native (0.1.1):
     - FlatAdMoPubAdapter/Configuration
     - FlatAdMoPubAdapter/Util
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAdMoPubAdapter/Rewarded (0.1.1):
     - FlatAdMoPubAdapter/Configuration
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
   - FlatAdMoPubAdapter/Util (0.1.1):
-    - FlatAds_sdk (~> 1.0.5)
+    - FlatAds_sdk (~> 1.0.7)
     - mopub-ios-sdk (~> 5.17.0)
-  - FlatAds_sdk (1.0.5):
-    - AFNetworking (~> 4.0.1)
-    - FMDB (~> 2.6.2)
+  - FlatAds_sdk (1.0.7):
     - GoogleAds-IMA-iOS-SDK (~> 3.14.3)
     - Masonry (~> 1.1.0)
     - MJExtension (~> 3.2.2)
-    - TCFoundation (~> 1.0.2)
+    - TCFoundation (~> 1.0.3)
     - YYImage/WebP (~> 1.0.4)
     - YYWebImage (~> 1.0.5)
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - GoogleAds-IMA-iOS-SDK (3.14.3)
+  - LookinServer (1.0.2)
   - Masonry (1.1.0)
   - MJExtension (3.2.4)
   - mopub-ios-sdk (5.17.0):
@@ -69,9 +68,9 @@ PODS:
     - mopub-ios-sdk/NativeAds
   - mopub-ios-sdk/NativeAds (5.17.0):
     - mopub-ios-sdk/Core
-  - TCFoundation (1.0.2):
+  - TCFoundation (1.0.4):
     - AFNetworking (~> 4.0.1)
-    - FMDB (~> 2.6.2)
+    - FMDB (~> 2.7.5)
     - TCUtil (~> 1.0.2)
   - TCUtil (1.0.2)
   - YYCache (1.0.4)
@@ -86,6 +85,7 @@ PODS:
 
 DEPENDENCIES:
   - FlatAdMoPubAdapter (from `../`)
+  - LookinServer
 
 SPEC REPOS:
   https://github.com/Cocoapods/Specs.git:
@@ -93,6 +93,7 @@ SPEC REPOS:
     - FlatAds_sdk
     - FMDB
     - GoogleAds-IMA-iOS-SDK
+    - LookinServer
     - Masonry
     - MJExtension
     - mopub-ios-sdk
@@ -108,19 +109,20 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  FlatAdMoPubAdapter: f7005f52941ac6c099d3f468eb008f716c4afdeb
-  FlatAds_sdk: 7323eb8231cb63de6b2a07700dc9a0cf7dc1a255
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FlatAdMoPubAdapter: 0b640684b2d9c967b5207cabe4a87fe020baf543
+  FlatAds_sdk: 24b1bcd7733d4b1d88164b3ada6efb6268b78025
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GoogleAds-IMA-iOS-SDK: 2a9b7b14bda4993306f05287f952dce41b5be4ad
+  LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   mopub-ios-sdk: 36d322902674b79b0560a1cb8d15af0548d364ea
-  TCFoundation: 7e0d9ffe1480e778d28cabe6401173940ef6eaeb
+  TCFoundation: 47341276d69f01f74c78447c76584274664525ca
   TCUtil: 817b1e6a8de5a7e411ab9344f542a498c9613296
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 69e55441ad016b64b5129cc5c15105c38a4adcba
+PODFILE CHECKSUM: 5f460a9556009d404b6cb93ebbfd490675c13bc6
 
 COCOAPODS: 1.10.1

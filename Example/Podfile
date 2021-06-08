@@ -7,6 +7,8 @@ platform :ios, '10.0'
 target 'FlatAdMoPubAdapter_Example' do
   pod 'FlatAdMoPubAdapter', :path => '../'
 
+  pod 'LookinServer', :configurations => ['Debug']
+  
   target 'FlatAdMoPubAdapter_Tests' do
     inherit! :search_paths
 

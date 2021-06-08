@@ -50,6 +50,8 @@
 - (void)levelDidEnd
 {
     if (self.interstitial.ready) {
+        
+//        UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
         [self.interstitial showFromViewController:self];
     } else {
         

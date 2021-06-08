@@ -20,8 +20,8 @@
   },
   "requires_arc": true,
   "static_framework": true,
-  "public_header_files": "FlatAdMoPubAdapter/Classes/**/*.h",
-  "source_files": "FlatAdMoPubAdapter/Classes/**/*.{h,m}",
+  "public_header_files": "FlatAdMoPubAdapter/Classes/FlatAdMoPubAdapter.h",
+  "source_files": "FlatAdMoPubAdapter/Classes/FlatAdMoPubAdapter.h",
   "pod_target_xcconfig": {
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "FlatAds_sdk": [
-      "~> 1.0.5"
+      "~> 1.0.7"
     ],
     "mopub-ios-sdk": [
       "~> 5.17.0"
@@ -50,11 +50,11 @@
     },
     {
       "name": "Configuration",
-      "source_files": "FlatAdMoPubAdapter/Configuration"
+      "source_files": "FlatAdMoPubAdapter/Classes/Configuration"
     },
     {
       "name": "Interstitial",
-      "source_files": "FlatAdMoPubAdapter/Interstitial",
+      "source_files": "FlatAdMoPubAdapter/Classes/Interstitial",
       "dependencies": {
         "FlatAdMoPubAdapter/Configuration": [
 
@@ -63,7 +63,7 @@
     },
     {
       "name": "Native",
-      "source_files": "FlatAdMoPubAdapter/Native",
+      "source_files": "FlatAdMoPubAdapter/Classes/Native",
       "dependencies": {
         "FlatAdMoPubAdapter/Configuration": [
 
@@ -75,7 +75,7 @@
     },
     {
       "name": "Rewarded",
-      "source_files": "FlatAdMoPubAdapter/Rewarded",
+      "source_files": "FlatAdMoPubAdapter/Classes/Rewarded",
       "dependencies": {
         "FlatAdMoPubAdapter/Configuration": [
 
@@ -84,7 +84,7 @@
     },
     {
       "name": "Util",
-      "source_files": "FlatAdMoPubAdapter/Util"
+      "source_files": "FlatAdMoPubAdapter/Classes/Util"
     }
   ]
 }

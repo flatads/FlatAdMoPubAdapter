@@ -37,6 +37,9 @@ typedef void(^FARewardedAdRequestBlock)(FARewardedAd * _Nullable rewardedAd, NSE
 
 @interface FARewardedAd : NSObject<FAAdViewProtocol>
 
+/// unit model
+@property (nonatomic, readonly, strong) FAAdRewardUnitModel * _Nullable unitModel;
+
 /// Reference to the object that implements FAAdInterstitialDelegate protocol; will receive load events for the given unitId.
 @property (nonatomic, weak, nullable) id<FARewardedAdDelegate> delegate;
 

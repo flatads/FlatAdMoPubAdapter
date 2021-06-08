@@ -224,10 +224,10 @@
 		A7D018352669C780007DBF6C /* Native */ = {
 			isa = PBXGroup;
 			children = (
-				A7D018362669C780007DBF6C /* MPCustomNativeAdView.m */,
+				A7D018392669C780007DBF6C /* MoPubNativeViewController.h */,
 				A7D018372669C780007DBF6C /* MoPubNativeViewController.m */,
 				A7D018382669C780007DBF6C /* MPCustomNativeAdView.h */,
-				A7D018392669C780007DBF6C /* MoPubNativeViewController.h */,
+				A7D018362669C780007DBF6C /* MPCustomNativeAdView.m */,
 			);
 			path = Native;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				5220F2A45225BC8871158171 /* [CP] Embed Pods Frameworks */,
-				F7B606680356FC8ABF692C6A /* [CP] Copy Pods Resources */,
+				96514A12712987C66A45C214 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,6 +313,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = flatads;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = JK2FSX2RGZ;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -371,6 +374,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+				"${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
@@ -384,6 +388,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
@@ -419,6 +424,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		96514A12712987C66A45C214 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FlatAds_sdk/FlatAds_sdk.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlatAds_sdk.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DA0FCBFA47E685EBCD9BA4A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,24 +462,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F7B606680356FC8ABF692C6A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FlatAds_sdk/FlatAds_sdk.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FlatAds_sdk.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlatAdMoPubAdapter_Example/Pods-FlatAdMoPubAdapter_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -601,6 +606,8 @@
 			baseConfigurationReference = 1F0CD223136591F30FB5CD5F /* Pods-FlatAdMoPubAdapter_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JK2FSX2RGZ;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatAdMoPubAdapter/FlatAdMoPubAdapter-Prefix.pch";
 				INFOPLIST_FILE = "FlatAdMoPubAdapter/FlatAdMoPubAdapter-Info.plist";
@@ -617,6 +624,8 @@
 			baseConfigurationReference = 6E0980FE3BB1F54CC7008ACE /* Pods-FlatAdMoPubAdapter_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JK2FSX2RGZ;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatAdMoPubAdapter/FlatAdMoPubAdapter-Prefix.pch";
 				INFOPLIST_FILE = "FlatAdMoPubAdapter/FlatAdMoPubAdapter-Info.plist";

@@ -29,3 +29,5 @@ FOUNDATION_EXPORT const unsigned char FlatAds_sdkVersionString[];
 
 #import <FlatAds_sdk/FAAdRewardUnitModel.h>
 #import <FlatAds_sdk/FARewardedAd.h>
+
+#import <FlatAds_sdk/UIImageView+TCUIKit.h>
