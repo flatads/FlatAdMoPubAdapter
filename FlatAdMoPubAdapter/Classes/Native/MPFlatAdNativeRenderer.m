@@ -24,6 +24,8 @@
 #import "MPFlatAdNativeAdAdapter.h"
 #import "UIView+MPFlatAdAdditions.h"
 
+#import <FlatAds_sdk/UIImageView+TCUIKit.h>
+
 @interface MPFlatAdNativeRenderer()<MPNativeAdRendererImageHandlerDelegate>
 
 /// Publisher adView which is rendering.
@@ -166,8 +168,9 @@
         // We'll start asychronously loading the native ad images now.
         if (self.adapter.properties[kAdIconImageKey] &&
             [self.adView respondsToSelector:@selector(nativeIconImageView)]) {
-            [self.rendererImageHandler loadImageForURL:[NSURL URLWithString:self.adapter.properties[kAdIconImageKey]]
-                                         intoImageView:self.adView.nativeIconImageView];
+            [self.adView.nativeIconImageView setImageWithString:self.adapter.properties[kAdIconImageKey]];
+//            [self.rendererImageHandler loadImageForURL:[NSURL URLWithString:self.adapter.properties[kAdIconImageKey]]
+//                                         intoImageView:self.adView.nativeIconImageView];
         }
         
         // Lay out custom assets here as the custom assets may contain images that need to be loaded.

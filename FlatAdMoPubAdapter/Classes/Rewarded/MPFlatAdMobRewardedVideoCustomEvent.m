@@ -100,7 +100,15 @@
     MPLogAdEvent([MPLogEvent adShowAttemptForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
     
     if (self.rewardedAd) {
+        [self.delegate fullscreenAdAdapterAdWillPresent:self];
+        
+        [self.delegate fullscreenAdAdapterAdWillAppear:self];
+        
         [self.rewardedAd presentAdFromRootViewController:viewController];
+        
+        [self.delegate fullscreenAdAdapterAdDidPresent:self];
+    
+        [self.delegate fullscreenAdAdapterAdDidAppear:self];
     } else {
         NSError *error = [NSError
                           errorWithDomain:MoPubRewardedAdsSDKDomain
@@ -134,6 +142,10 @@
 /// This method is called when ad is clicked.
 - (void)rewardedAdDidClicked:(nonnull FARewardedAd *)rewardedAd
 {
+    [self.delegate fullscreenAdAdapterDidReceiveTap:self];
+    
+    [self.delegate fullscreenAdAdapterWillLeaveApplication:self];
+    
     [self.delegate fullscreenAdAdapterDidTrackClick:self];
 }
 

@@ -99,7 +99,15 @@
     MPLogAdEvent([MPLogEvent adShowAttemptForAdapter:NSStringFromClass(self.class)], [self getAdNetworkId]);
     
     if (self.interstitial) {
-      [self.interstitial presentAdFromRootViewController:viewController];
+        [self.delegate fullscreenAdAdapterAdWillPresent:self];
+        
+        [self.delegate fullscreenAdAdapterAdWillAppear:self];
+        
+        [self.interstitial presentAdFromRootViewController:viewController];
+        
+        [self.delegate fullscreenAdAdapterAdDidPresent:self];
+    
+        [self.delegate fullscreenAdAdapterAdDidAppear:self];
     } else {
       NSError *mopubError = [NSError errorWithCode:MOPUBErrorAdapterInvalid localizedDescription:@"Failed to show Google interstitial. An ad wasn't ready"];
       [self.delegate fullscreenAdAdapter:self didFailToShowAdWithError:mopubError];
@@ -129,6 +137,10 @@
 /// This method is called when ad is clicked.
 - (void)interstitialAdDidClicked:(nonnull FAInterstitialAd *)interstitialAd
 {
+    [self.delegate fullscreenAdAdapterDidReceiveTap:self];
+    
+    [self.delegate fullscreenAdAdapterWillLeaveApplication:self];
+    
     [self.delegate fullscreenAdAdapterDidTrackClick:self];
 }
 

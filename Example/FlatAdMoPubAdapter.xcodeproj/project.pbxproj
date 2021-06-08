@@ -235,8 +235,8 @@
 		A7D0183A2669C780007DBF6C /* Rewarded */ = {
 			isa = PBXGroup;
 			children = (
-				A7D0183B2669C780007DBF6C /* MoPubRewardedViewController.m */,
 				A7D0183C2669C780007DBF6C /* MoPubRewardedViewController.h */,
+				A7D0183B2669C780007DBF6C /* MoPubRewardedViewController.m */,
 			);
 			path = Rewarded;
 			sourceTree = "<group>";

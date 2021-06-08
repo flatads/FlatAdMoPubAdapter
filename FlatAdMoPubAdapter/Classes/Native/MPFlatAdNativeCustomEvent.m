@@ -158,17 +158,17 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
 //        }
 //    }
     
-    [super precacheImagesWithURLs:imageURLs
-                  completionBlock:^(NSArray *errors) {
-        if (errors) {
-            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForImageDownloadFailure()], self.unitId);
-            [self.delegate nativeCustomEvent:self
-                    didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];
-        } else {
+//    [super precacheImagesWithURLs:imageURLs
+//                  completionBlock:^(NSArray *errors) {
+//        if (errors) {
+//            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForImageDownloadFailure()], self.unitId);
+//            [self.delegate nativeCustomEvent:self
+//                    didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];
+//        } else {
             MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], self.unitId);
             [self.delegate nativeCustomEvent:self didLoadAd:moPubNativeAd];
-        }
-    }];
+//        }
+//    }];
 
     
     // Sending impression to MoPub SDK.

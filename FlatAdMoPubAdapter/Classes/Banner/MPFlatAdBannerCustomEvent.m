@@ -124,6 +124,7 @@
 /// This method is called when ad is clicked.
 - (void)bannerAdViewDidClick:(nonnull FAAdBannerView *)bannerAdView
 {
+    [self.delegate inlineAdAdapterWillLeaveApplication:self];
     [self.delegate inlineAdAdapterDidTrackClick:self];
 }
 
