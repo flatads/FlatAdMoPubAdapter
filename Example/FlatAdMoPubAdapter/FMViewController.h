@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface FMViewController : UIViewController
+@interface FMViewController : UITableViewController
 
 @end

@@ -149,14 +149,14 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
         }
     }
 
-//    if ([moPubNativeAd.properties[kAdMainImageKey] length]) {
-//        if (![MPNativeAdUtils addURLString:moPubNativeAd.properties[kAdMainImageKey]
-//                                toURLArray:imageURLs]) {
-//            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForInvalidImageURL()], self.unitId);
-//            [self.delegate nativeCustomEvent:self
-//                    didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidImageURL()];
-//        }
-//    }
+    if ([moPubNativeAd.properties[kAdMainImageKey] length]) {
+        if (![MPNativeAdUtils addURLString:moPubNativeAd.properties[kAdMainImageKey]
+                                toURLArray:imageURLs]) {
+            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:MPNativeAdNSErrorForInvalidImageURL()], self.unitId);
+            [self.delegate nativeCustomEvent:self
+                    didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidImageURL()];
+        }
+    }
     
 //    [super precacheImagesWithURLs:imageURLs
 //                  completionBlock:^(NSArray *errors) {
@@ -165,11 +165,35 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
 //            [self.delegate nativeCustomEvent:self
 //                    didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];
 //        } else {
-            MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], self.unitId);
-            [self.delegate nativeCustomEvent:self didLoadAd:moPubNativeAd];
+//            MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], self.unitId);
+//            [self.delegate nativeCustomEvent:self didLoadAd:moPubNativeAd];
 //        }
 //    }];
 
+    __block BOOL success = YES;
+    dispatch_group_t requestGroup = dispatch_group_create();
+    for(NSURL *imageUrl in imageURLs) {
+        dispatch_group_enter(requestGroup);
+        [[UIImageView new] setImageWithString:imageUrl.absoluteString
+                             placeholderImage:nil
+                              completionBlock:^(UIImage * _Nonnull image, NSError * _Nonnull error, NSURL * _Nonnull imageURL, BOOL changed) {
+            if (error) {
+                success = NO;
+            }
+            dispatch_group_leave(requestGroup);
+        }];
+    }
+    __weak typeof(self) weakSelf = self;
+    dispatch_group_notify(requestGroup, dispatch_get_main_queue(), ^{
+        if (success) {
+            MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(weakSelf.class)], weakSelf.unitId);
+            [weakSelf.delegate nativeCustomEvent:self didLoadAd:moPubNativeAd];
+        } else {
+            MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(weakSelf.class) error:MPNativeAdNSErrorForImageDownloadFailure()], weakSelf.unitId);
+            [weakSelf.delegate nativeCustomEvent:weakSelf
+                    didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];
+        }
+    });
     
     // Sending impression to MoPub SDK.
     [adapter nativeAdImpression];;

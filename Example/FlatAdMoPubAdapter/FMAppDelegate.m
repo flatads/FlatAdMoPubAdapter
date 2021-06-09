@@ -26,7 +26,7 @@
 
 - (void)_initMoPub
 {
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@""];
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"fhierhfiehfie"];
     
     sdkConfig.globalMediationSettings = @[];
     sdkConfig.loggingLevel = MPBLogLevelInfo;
