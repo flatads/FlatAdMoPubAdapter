@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, FAFlatAdAdapterErrorCode) {
 
 - (NSString *)adapterVersion
 {
-    return  [[FlatAdsSDK sdkVersion] stringByAppendingString:@".1"];
+    return  [[FlatAdsSDK sdkVersion] stringByAppendingString:@".2"];
 }
 
 - (NSString *)biddingToken
@@ -86,7 +86,7 @@ typedef NS_ENUM(NSInteger, FAFlatAdAdapterErrorCode) {
             complete(error);
         }
     } else {
-        [FAFlatAdapterConfiguration flatAdSDKInitWithAppId:configuration[kAdMobApplicationIdKey] token:flatToken];
+        [FAFlatAdapterConfiguration flatAdSDKInitWithAppId:flatAppId token:flatToken];
         if (complete != nil) {
             complete(nil);
         }

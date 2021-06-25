@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlatAdMoPubAdapter'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'FlatAds_sdk MoPub Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ An FlatAds_sdk adapter 4 mopub.
   s.homepage         = 'https://github.com/flatads/FlatAdMoPubAdapter'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'flatads' => 'chenwh02@flatincbr.com' }
+  s.author           = { 'FlatAds Team' => 'flatincbr.dev@gmail.com' }
   s.source           = { :git => 'https://github.com/flatads/FlatAdMoPubAdapter.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -83,7 +83,7 @@ An FlatAds_sdk adapter 4 mopub.
     sb.source_files = 'FlatAdMoPubAdapter/Classes/Util'
   end
   
-  s.dependency "FlatAds_sdk", "~> 1.0"
+  s.dependency "FlatAds_sdk", "~> 1.1"
   s.dependency "mopub-ios-sdk", "~> 5.17.0"
   
 end

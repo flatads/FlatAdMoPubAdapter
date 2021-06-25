@@ -79,7 +79,7 @@
 		A7D0183C2669C780007DBF6C /* MoPubRewardedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoPubRewardedViewController.h; sourceTree = "<group>"; };
 		A7D0183E2669C780007DBF6C /* MopubBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MopubBannerViewController.h; sourceTree = "<group>"; };
 		A7D0183F2669C780007DBF6C /* MopubBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MopubBannerViewController.m; sourceTree = "<group>"; };
-		B98D9C9B883A1196C73AEC32 /* FlatAdMoPubAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FlatAdMoPubAdapter.podspec; path = ../FlatAdMoPubAdapter.podspec; sourceTree = "<group>"; };
+		B98D9C9B883A1196C73AEC32 /* FlatAdMoPubAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FlatAdMoPubAdapter.podspec; path = ../FlatAdMoPubAdapter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BA7B05E1201D1EA5E63571D3 /* Pods_FlatAdMoPubAdapter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlatAdMoPubAdapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB637DFE685D87D1E9704E76 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,7 +273,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				5220F2A45225BC8871158171 /* [CP] Embed Pods Frameworks */,
-				96514A12712987C66A45C214 /* [CP] Copy Pods Resources */,
+				9FDBAE05E784151DA0E17F7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -424,7 +424,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		96514A12712987C66A45C214 /* [CP] Copy Pods Resources */ = {
+		9FDBAE05E784151DA0E17F7A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

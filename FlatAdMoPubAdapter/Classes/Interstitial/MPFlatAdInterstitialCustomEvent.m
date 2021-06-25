@@ -74,6 +74,13 @@
     FAAdUnitModel *model = [FAAdUnitModel new];
     model.unitId = self.unitId;
     
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootViewController = window.rootViewController;
+    while (rootViewController.presentedViewController) {
+        rootViewController = rootViewController.presentedViewController;
+    }
+    model.viewController = rootViewController;
+    
     MPLogAdEvent([MPLogEvent adLoadAttemptForAdapter:NSStringFromClass(self.class) dspCreativeId:nil dspName:nil], [self getAdNetworkId]);
     
     __weak typeof(self) weakSelf = self;
@@ -89,8 +96,6 @@
         
         MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(weakSelf.class)], [weakSelf getAdNetworkId]);
         [weakSelf.delegate fullscreenAdAdapterDidLoadAd:weakSelf];
-        
-        [weakSelf.delegate fullscreenAdAdapterDidTrackImpression:weakSelf];
     }];
 }
 
@@ -132,6 +137,11 @@
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:mopubError], [self getAdNetworkId]);
     
     [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:mopubError];
+}
+
+- (void)interstitialAdDidRecordImpression:(nonnull FAInterstitialAd *)interstitialAd
+{
+    [self.delegate fullscreenAdAdapterDidTrackImpression:self];
 }
 
 /// This method is called when ad is clicked.

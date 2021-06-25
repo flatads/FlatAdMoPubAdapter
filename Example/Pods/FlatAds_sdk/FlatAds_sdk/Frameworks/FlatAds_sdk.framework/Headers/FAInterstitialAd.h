@@ -28,6 +28,9 @@ typedef void(^FALoadInterstitialAdBlock)(FAInterstitialAd * _Nullable interstiti
 /// This method is called when adView ad slot failed to load.
 - (void)interstitialAd:(FAInterstitialAd *)interstitialAd didFailWithError:(NSError * __nullable)error;
 
+/// Tells the delegate that an impression has been recorded for an ad.
+- (void)interstitialAdDidRecordImpression:(nonnull FAInterstitialAd *)interstitialAd;
+
 /// This method is called when ad is clicked.
 - (void)interstitialAdDidClicked:(nonnull FAInterstitialAd *)interstitialAd;
 
@@ -54,7 +57,6 @@ typedef void(^FALoadInterstitialAdBlock)(FAInterstitialAd * _Nullable interstiti
 /// Display interstitial ad.
 /// @param rootViewController : root view controller for displaying ad.
 /// @return : whether it is successfully displayed.
-
 - (BOOL)presentAdFromRootViewController:(UIViewController *)rootViewController;
 
 @end

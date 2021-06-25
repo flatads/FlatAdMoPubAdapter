@@ -31,3 +31,10 @@ FOUNDATION_EXPORT const unsigned char FlatAds_sdkVersionString[];
 #import <FlatAds_sdk/FARewardedAd.h>
 
 #import <FlatAds_sdk/UIImageView+TCUIKit.h>
+
+
+// Bid
+#import <FlatAds_sdk/FABiddingHeader.h>
+#import <FlatAds_sdk/FABiddingRequest.h>
+#import <FlatAds_sdk/FABiddingResponse.h>
+#import <FlatAds_sdk/FABiddingRequestParameter.h>

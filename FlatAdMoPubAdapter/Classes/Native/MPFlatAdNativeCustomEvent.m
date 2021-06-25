@@ -25,9 +25,23 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
 
 @property(nonatomic, copy) NSString *unitId;
 
+@property(nonatomic, assign) BOOL isExpandInfo;
+
+@property (nonatomic, assign) NSUInteger expanPosition;
+
 @end
 
 @implementation MPFlatAdNativeCustomEvent
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _isExpandInfo = YES;
+        _expanPosition = 0;
+    }
+    return self;
+}
 
 + (void)setAdInfoViewPosition:(FAInfoIconButtonExpanPosition)position
 {
@@ -46,6 +60,13 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
     [FAFlatAdapterConfiguration updateInitializationParameters:info];
     
     self.unitId = info[@"unitid"];
+    if (info[@"isExpandInfo"]) {
+        self.isExpandInfo = [info[@"isExpandInfo"] boolValue];
+    }
+    
+    if (info[@"expanPosition"]) {
+        self.expanPosition = [info[@"expanPosition"] unsignedIntegerValue];
+    }
     
     if (!(self.unitId && [self.unitId isKindOfClass:[NSString class]] && self.unitId.length > 0) ) {
         NSError *error =
@@ -96,7 +117,8 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
 - (void)loadNativeAd:(FANativeAd *)nativeAd
 {
     FAAdNativeView *nativeAdView = [FAAdNativeView new];
-    
+    nativeAdView.isExpandInfoView = self.isExpandInfo;
+    nativeAdView.expanPosition = self.expanPosition;
     FAMediaView* mediaView = [FAMediaView new];
     [nativeAdView addSubview:mediaView];
     nativeAdView.mediaView = mediaView;
@@ -194,9 +216,6 @@ static FAInfoIconButtonExpanPosition adInfoPosition;
                     didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];
         }
     });
-    
-    // Sending impression to MoPub SDK.
-    [adapter nativeAdImpression];;
 }
 
 #pragma mark - Private Methods

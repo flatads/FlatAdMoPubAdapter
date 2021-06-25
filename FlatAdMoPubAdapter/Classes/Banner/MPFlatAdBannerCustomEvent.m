@@ -89,8 +89,14 @@
     }
     
     FAAdBannerUnitModel* unitModel = [FAAdBannerUnitModel new];
-    unitModel.sizeType = size.height > 50 ? FAAdBannerSizeType300x250 : FAAdBannerSizeType320x50;
     unitModel.unitId = self.unitId;
+    
+    FAAdBannerSizeType sizeType = FAAdBannerSizeType320x50;
+    if (info[@"sizeType"]) {
+        sizeType = [info[@"sizeType"] unsignedIntegerValue];
+    }
+    unitModel.sizeType = sizeType;
+    
     unitModel.viewController = [self.delegate inlineAdAdapterViewControllerForPresentingModalView:self];
     
     self.adBannerView = [[FAAdBannerView alloc] initWithUnitModel:unitModel];
@@ -111,14 +117,17 @@
 - (void)bannerAdViewLoadSuccess:(nonnull FAAdBannerView *)bannerAdView
 {
     [self.delegate inlineAdAdapter:self didLoadAdWithAdView:self.adBannerView];
-    
-    [self.delegate inlineAdAdapterDidTrackImpression:self];
 }
 
 /// This method is called when adView ad slot failed to load.
 - (void)bannerAdView:(nonnull FAAdBannerView *)bannerAdView didLoadFailWithError:(nonnull NSError *)error
 {
     [self.delegate inlineAdAdapter:self didFailToLoadAdWithError:error];
+}
+
+- (void)bannerAdViewDidRecordImpression:(nonnull FAAdBannerView *)bannerView
+{
+    [self.delegate inlineAdAdapterDidTrackImpression:self];
 }
 
 /// This method is called when ad is clicked.

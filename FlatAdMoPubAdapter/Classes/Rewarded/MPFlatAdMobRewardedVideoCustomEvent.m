@@ -76,6 +76,22 @@
     FAAdRewardUnitModel *model = [[FAAdRewardUnitModel alloc] init];
     model.unitId = self.unitId;
     
+    NSMutableDictionary* appendInfo = @{}.mutableCopy;
+    appendInfo[@"customer_id"] = info[@"customer_id"];
+    appendInfo[@"unique_id"] = info[@"unique_id"];
+    appendInfo[@"reward_type"] = info[@"reward_type"];
+    appendInfo[@"reward_value"] = info[@"reward_value"];
+    appendInfo[@"verifier"] = info[@"verifier"];
+    appendInfo[@"extinfo"] = info[@"extinfo"];
+    model.appendInfo = appendInfo;
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootViewController = window.rootViewController;
+    while (rootViewController.presentedViewController) {
+        rootViewController = rootViewController.presentedViewController;
+    }
+    model.viewController = rootViewController;
+    
     __weak typeof(self) weakSelf = self;
     [FARewardedAd loadWithAdUnitModel:model
                     completionHandler:^(FARewardedAd * _Nullable rewardedAd, NSError * _Nullable error) {
@@ -90,8 +106,6 @@
         MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(weakSelf.class)], [weakSelf getAdNetworkId]);
         
         [weakSelf.delegate fullscreenAdAdapterDidLoadAd:weakSelf];
-        
-        [weakSelf.delegate fullscreenAdAdapterDidTrackImpression:weakSelf];
     }];
 }
 
@@ -147,6 +161,12 @@
     [self.delegate fullscreenAdAdapterWillLeaveApplication:self];
     
     [self.delegate fullscreenAdAdapterDidTrackClick:self];
+}
+
+/// Tells the delegate that an impression has been recorded for an ad.
+- (void)rewardedAdDidRecordImpression:(nonnull FARewardedAd *)rewardedAd
+{
+    [self.delegate fullscreenAdAdapterDidTrackImpression:self];
 }
 
 /// This method is called when ad is Closed.

@@ -36,8 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFlatNativeAd:(FANativeAd *)nativeAd
                         nativeAdView:(FAAdNativeView *)nativeAdView;
 
-- (void)nativeAdImpression;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -24,7 +24,7 @@
 - (nonnull instancetype)initWithUnitModel:(nonnull FAAdUnitModel *)model;
 
 /**
- * Request a  Ad data.
+ * Request a Ad data.
  */
 - (void)loadAds;
 

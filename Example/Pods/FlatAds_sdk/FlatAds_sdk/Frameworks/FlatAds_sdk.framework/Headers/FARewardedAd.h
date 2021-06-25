@@ -20,7 +20,10 @@ typedef void(^FARewardedAdRequestBlock)(FARewardedAd * _Nullable rewardedAd, NSE
 @optional
 
 /// This method is called when adView ad slot failed to load.
-- (void)rewardedAd:(FARewardedAd *)rewardedAd didFailWithError:(NSError * _Nullable)error;
+- (void)rewardedAd:(nonnull FARewardedAd *)rewardedAd didFailWithError:(NSError * _Nullable)error;
+
+/// Tells the delegate that an impression has been recorded for an ad.
+- (void)rewardedAdDidRecordImpression:(nonnull FARewardedAd *)rewardedAd;
 
 /// This method is called when ad is clicked.
 - (void)rewardedAdDidClicked:(nonnull FARewardedAd *)rewardedAd;

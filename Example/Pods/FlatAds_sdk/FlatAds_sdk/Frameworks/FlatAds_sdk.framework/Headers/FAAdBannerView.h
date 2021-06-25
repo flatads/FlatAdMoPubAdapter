@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// This method is called when adView ad slot failed to load.
 - (void)bannerAdView:(nonnull FAAdBannerView *)bannerAdView didLoadFailWithError:(nonnull NSError *)error;
 
+/// Tells the delegate that an impression has been recorded for an ad.
+- (void)bannerAdViewDidRecordImpression:(nonnull FAAdBannerView *)bannerView;
+
 /// This method is called when ad is clicked.
 - (void)bannerAdViewDidClick:(nonnull FAAdBannerView *)bannerAdView;
 
@@ -39,11 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FAAdBannerView : FAAdBaseView
 
+/// unit model
 @property (nonatomic, readonly, strong) FAAdBannerUnitModel *unitModel;
 
 /// Reference to the object that implements FABannerAdViewDelegate protocol; will receive load events for the given unitId.
 @property (nonatomic, weak, nullable) id<FABannerAdViewDelegate> delegate;
 
+/// initialize a FAAdBaseView with the FAAdBannerUnitModel.
+/// @param model FAAdBannerUnitModel
 - (instancetype)initWithUnitModel:(FAAdBannerUnitModel *)model;
 
 @end

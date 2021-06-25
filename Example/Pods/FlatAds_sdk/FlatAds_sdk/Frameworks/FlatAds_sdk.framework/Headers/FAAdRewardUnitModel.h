@@ -13,22 +13,22 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FAAdRewardUnitModel : FAAdUnitModel
 
 /// The rewarded customer ID
-@property (nonatomic, copy) NSString *customerId;
+@property (nonatomic, copy, nullable) NSString *customerId;
 
 /// A rewarded unique id
-@property (nonatomic, copy) NSString *uniqueId;
+@property (nonatomic, copy, nullable) NSString *rewardedUniqueId;
 
 /// The type of currency the user is receiving.
-@property(nonatomic, copy) NSString *type;
+@property(nonatomic, copy, nullable) NSString *type;
 
 /// The amount of currency the user is receiving.
 @property(nonatomic, strong) NSNumber *amount;
 
 /// Captcha code, used for callback chain validation
-@property (nonatomic, copy) NSString *verifier;
+@property (nonatomic, copy, nullable) NSString *verifier;
 
 /// Custom information: json string
-@property (nonatomic, copy) NSString *extinfo;
+@property (nonatomic, copy, nullable) NSString *extinfo;
 
 @end
 

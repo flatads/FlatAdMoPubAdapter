@@ -25,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FANativeAd : NSObject
 
-/// Ad unit id
-@property (nonatomic, readonly, copy, nullable) NSString *unitId;
+/// Ad unit model
+@property (nonatomic, readonly, strong, nullable) FAAdUnitModel *unitModel;
 
 /// Icon image.
 @property (nonatomic, readonly, strong, nullable) FAImageInfoModel *icon;
@@ -62,6 +62,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// This method is called when ad is clicked.
 - (void)nativeAdViewDidClick:(nonnull FAAdNativeView *)nativeView;
 
+/// Tells the delegate that an impression has been recorded for an ad.
+- (void)nativeAdViewDidRecordImpression:(nonnull FAAdNativeView *)nativeView;
+
 /// This method is called when ad is Closed.
 - (void)nativeAdViewDidClosed:(nonnull FAAdNativeView *)nativeView;
 
@@ -96,6 +99,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// the info Icon expan position
 @property (nonatomic, assign) FAInfoIconButtonExpanPosition expanPosition;
 
+/// Whether the InfoView needs to be expanded. Default is YES
+@property (nonatomic, assign) BOOL isExpandInfoView;
 
 /// Play the video, if nativeAd.hasVideoContent = YES
 - (void)playVideo;

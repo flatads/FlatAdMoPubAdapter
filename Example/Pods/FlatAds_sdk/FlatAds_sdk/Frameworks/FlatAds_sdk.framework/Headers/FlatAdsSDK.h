@@ -21,11 +21,10 @@ typedef NS_ENUM(NSUInteger, FALogLevel) {
 };
 
 @interface FlatAdsSDK : NSObject
-/**
- * Config App Info
- * @param appID The unique identifier of the sdk
- * @param appToken Register the app token that’s already been applied
- */
+ 
+/// Config App Info
+/// @param appID The unique identifier of the sdk
+/// @param appToken Register the app token that’s already been applied
 + (void)setAppID:(nonnull NSString *)appID appToken:(nonnull NSString *)appToken;
 
 /// Get version of the sdk

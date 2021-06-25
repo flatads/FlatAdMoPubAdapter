@@ -72,17 +72,17 @@
 
 #pragma mark - Public
 
-- (void)nativeAdImpression
-{
-    [self.delegate nativeAdWillLogImpression:self];
-}
-
-
 #pragma mark - FANativeAdViewDelegate
 
 /// This method is called when adView ad slot failed to load.
 - (void)nativeAdView:(nonnull FAAdNativeView *)nativeView didLoadFailWithError:(nonnull NSError *)error
 {
+}
+
+/// Tells the delegate that an impression has been recorded for an ad.
+- (void)nativeAdViewDidRecordImpression:(nonnull FAAdNativeView *)bannerView
+{
+    [self.delegate nativeAdWillLogImpression:self];
 }
 
 /// This method is called when ad is clicked.
